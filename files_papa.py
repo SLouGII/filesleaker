@@ -46,7 +46,6 @@ print(f"Contenu du dossier {directory}.")
 # La fonction iterdir est ce qu'on appelle un itérateur, il va renvoyer le nom de tous les fichiers dans le directory
 # Donc la boucle fonctionne comme ça, on attribue a file la valeur de tout ce qui est dans directory.  ça marche aussi avec les listes.
 
-# Je voudrais afficher les dossiers avant els fichiers et d'une autre manière. je crée donc deux variables liste pour les stocker différement.
 for file in directory.iterdir() :
     type = 'Dossier' if file.is_dir() else 'Fichier'
     print(f"{type}  - {bytes_to_readable(file.stat().st_size)}  - {file}")
